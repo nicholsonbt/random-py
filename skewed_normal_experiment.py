@@ -98,8 +98,6 @@ def NewRow(lower, upper):
     # Calculate a mean that gives a value closer to the the desired mean when averaged.
     derived_mean = GetBetterMean(minimum, maximum, base_mean, base_mean, 0.0001)
     
-    # w = [ 0.0, 0.27950631, 0.2789222, 1.18077736, 0.27921426, -0.9015631, 1.48811746, -1.01904657 ]
-    # Average offset from actual: 0.000012 (10000 training samples, 100 testing samples)
     return np.array([minimum, maximum, base_mean, median, offset, skew, actual_mean]), derived_mean
 
 
@@ -130,7 +128,7 @@ def GetNSamples(lower, upper, n):
 
 
 def MeanExperiment():
-    train_samples = 10000
+    train_samples = 1000
     test_samples = 100
 
     lower = -1000
@@ -179,11 +177,6 @@ def MeanExperiment():
 # Only run the experiment if this is the main script.
 if __name__ == "__main__":
     MeanExperiment()
-
-
-
-
-
 
 
 

@@ -67,6 +67,8 @@ def Experiment(minimum, maximum, mean):
     # Get 10000 data samples.
     data = [RandomNormalSkewedSimplified(mean, minimum, maximum) for i in range(10000)]
 
+    print("Mean: ", sum(data) / 10000)
+
     # Plot the samples on the histogram with 100 bins.
     plt.hist(data, 100)
 

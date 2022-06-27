@@ -57,7 +57,7 @@ def RandomNormalSkewedSimplified(mean, minimum, maximum):
     sd = (maximum - minimum) / (2 * math.pi)
 
     # I derived this from the Fisher-Pearson coefficient of skewness.
-    skew = math.pow(offset, 3) / math.pow(sd,3)
+    skew = math.pow(offset, 3) / math.pow(sd, 3)
 
     # Generate and return a random number using the above calculations to estimate reasonable SD
     # and skew values.
@@ -75,7 +75,7 @@ def Experiment(minimum, maximum, mean):
 
 # Only run the experiment if this is the main script.
 if __name__ == "__main__":
-    Experiment(5, 15, 13)
+    Experiment(5, 15, 7)
 
 
 
